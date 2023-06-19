@@ -1,6 +1,6 @@
 <template>
     <div class="app-cards-list">
-        <h1>I'm AppCardsList</h1>
+        <h2>Found {{ store.yugiohApi.length }} elements</h2>
         <AppCardsElement v-for="card in store.yugiohApi" />
     </div>
 </template>
