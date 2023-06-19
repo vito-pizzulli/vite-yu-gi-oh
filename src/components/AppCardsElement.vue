@@ -24,8 +24,9 @@ export default {
         background-color: #d48f38;
         width: calc(100% / 5 - 1rem);
         height: 500px;
-        margin-bottom: 2rem;
+        margin: 1rem 0;
         text-align: center;
+        border-radius: 0 0 20px 20px;
 
         img {
             width: 100%;
