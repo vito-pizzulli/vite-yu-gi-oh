@@ -1,23 +1,16 @@
 <template>
     <div class="app-cards-element">
-        <h1>{{ store.yugiohApi[index].name }}</h1>
+        <h1>{{ cardElement.name }}</h1>
     </div>
 </template>
 
 <script>
-import { store } from '../store.js';
 export default {
     name: 'AppCardsElement',
 
     props: {
-        index: Number
+        cardElement: Object
     },
-
-    data() {
-        return {
-            store
-        }
-    }
 }
 </script>
 

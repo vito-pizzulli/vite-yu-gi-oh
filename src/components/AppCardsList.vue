@@ -1,8 +1,8 @@
 <template>
     <div class="app-cards-list">
         <h2>Found {{ store.yugiohApi.length }} elements</h2>
-        <AppCardsElement v-for="(card, index) in store.yugiohApi"
-            :index="index"
+        <AppCardsElement v-for="card in store.yugiohApi"
+            :cardElement="card"
         />
     </div>
 </template>
