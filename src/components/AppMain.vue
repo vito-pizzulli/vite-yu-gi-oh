@@ -22,7 +22,7 @@ export default {
     },
 
     created(){
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=3711')
             .then(function (response) {
                 console.log(response.data.data);
                 store.yugiohApi = response.data.data
