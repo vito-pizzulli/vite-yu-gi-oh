@@ -1,6 +1,8 @@
 <template>
     <div class="app-cards-element">
-        <h1>{{ cardElement.name }}</h1>
+        <img :src="cardElement.card_images[0].image_url" :alt="cardElement.name + 'Image'">
+        <span>{{ cardElement.name }}</span>
+        <span>{{ cardElement.archetype }}</span>
     </div>
 </template>
 
