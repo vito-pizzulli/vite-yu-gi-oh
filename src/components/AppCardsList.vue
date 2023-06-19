@@ -17,12 +17,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @use '../styles/general' as *;
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
     div.app-cards-list {
-        background-color: yellow;
+        background-color: white;
         padding: 1rem;
     }
 </style>

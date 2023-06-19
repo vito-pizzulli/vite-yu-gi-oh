@@ -11,12 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @use '../styles/general' as *;
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
     div.app-cards-element {
-        background-color: orange;
+        background-color: #d48f38;
         padding: 1rem;
     }
 </style>
