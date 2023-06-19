@@ -1,7 +1,7 @@
 <template>
     <header>
         <img src="../assets/img/yugioh-logo.webp" alt="Yu-Gi-Oh Logo">
-        <h1>Yu-Gi-Oh Api</h1>
+        <h1>Yu-Gi-Oh API</h1>
     </header>
 </template>
 
