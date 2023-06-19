@@ -1,6 +1,7 @@
 <template>
     <header>
-        <h1>I'm AppHeader</h1>
+        <img src="../assets/img/yugioh-logo.webp" alt="Yu-Gi-Oh Logo">
+        <h1>Yu-Gi-Oh Api</h1>
     </header>
 </template>
 
@@ -16,7 +17,15 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     header {
-        background-color: red;
+        @include flex(row, start, center, no-wrap);
         padding: 1rem;
+
+        img {
+            width: 150px;
+        };
+
+        h1 {
+            margin-left: 1rem;
+        }
     }
 </style>
