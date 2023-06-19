@@ -1,7 +1,8 @@
 import { reactive } from 'vue';
 
 const store = reactive({
-    yugiohApi: ''
+    yugiohApi: '',
+    cardsLoading: true
 })
 
 export { store }
