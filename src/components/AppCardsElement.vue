@@ -1,8 +1,8 @@
 <template>
     <div class="app-cards-element">
         <img :src="cardElement.card_images[0].image_url" :alt="cardElement.name + 'Image'">
-        <span>{{ cardElement.name }}</span>
-        <span>{{ cardElement.archetype }}</span>
+        <h3>{{ cardElement.name }}</h3>
+        <span>{{ cardElement.race }}</span>
     </div>
 </template>
 
@@ -22,6 +22,24 @@ export default {
 
     div.app-cards-element {
         background-color: #d48f38;
-        padding: 1rem;
+        width: calc(100% / 5 - 1rem);
+        height: 500px;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        img {
+            width: 100%;
+        };
+
+        h3 {
+            color: white;
+            text-transform: uppercase;
+            margin: .5rem;
+        }
+
+        span {
+            display: inline-block;
+            margin: .5rem;
+        }
     }
 </style>
