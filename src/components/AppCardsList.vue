@@ -41,6 +41,7 @@ export default {
             color: white;
             padding: 1rem;
             flex-basis: 100%;
+            border-radius: 10px;
         }
     }
 </style>
