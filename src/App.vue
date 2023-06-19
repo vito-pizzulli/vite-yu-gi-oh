@@ -20,6 +20,4 @@ export default {
 
 <style lang="scss">
   @use './styles/general' as *;
-  @use './styles/partials/variables' as *;
-  @use './styles/partials/mixins' as *;
 </style>
