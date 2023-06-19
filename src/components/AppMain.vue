@@ -1,6 +1,5 @@
 <template>
     <main>
-        <h1>I'm AppMain</h1>
         <AppCardsList />
     </main>
 </template>
@@ -22,7 +21,7 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     main {
-        background-color: blue;
+        background-color: #d48f38;
         padding: 1rem;
     }
 </style>
