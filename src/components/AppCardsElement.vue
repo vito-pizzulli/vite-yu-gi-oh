@@ -2,7 +2,8 @@
     <div class="app-cards-element">
         <img :src="cardElement.card_images[0].image_url" :alt="cardElement.name + 'Image'">
         <h3>{{ cardElement.name }}</h3>
-        <span>{{ cardElement.archetype }}</span>
+        <span v-if="(cardElement.archetype)">{{ cardElement.archetype }}</span>
+        <span v-else>No Archetype</span>
     </div>
 </template>
 
@@ -21,12 +22,15 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     div.app-cards-element {
-        background-color: #d48f38;
+        @include flex(column, start, center, no-wrap);
+        background-image: url(../assets/img/backcard_texture.webp);
+        background-position: center;
+        border: 3px solid black;
         width: calc(100% / 5 - 2rem);
         height: 500px;
         margin: 1rem;
         text-align: center;
-        border-radius: 0 0 20px 20px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
         img {
             width: 100%;
@@ -36,11 +40,17 @@ export default {
             color: white;
             text-transform: uppercase;
             margin: .5rem;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
 
         span {
             display: inline-block;
             margin: .5rem;
+            color: rgb(255, 219, 126);
+            font-weight: 600;
+            padding: .5rem;
+            font-size: 1.3rem;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
     }
 </style>

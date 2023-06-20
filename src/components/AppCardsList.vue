@@ -32,17 +32,18 @@ export default {
 
     div.app-cards-list {
         @include flex(row, start, start, wrap);
-        background-color: white;
         padding: 3rem;
         width: 80%;
         margin: 0 auto;
 
         h2 {
-            background-color: black;
+            background-image: url(../assets/img/header_background.png);
+            border: 3px solid black;
             color: white;
             padding: 1rem;
             flex-basis: 100%;
             border-radius: 10px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
     }
 </style>

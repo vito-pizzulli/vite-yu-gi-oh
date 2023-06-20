@@ -93,7 +93,10 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     main {
-        background-color: #d48f38;
+        background-image: url(../assets/img/main_background.webp);
+        background-attachment: fixed;
+        background-size: contain;
+        background-position: bottom;
         padding: 1rem;
     }
 </style>
