@@ -2,7 +2,8 @@
     <main>
         <AppSearchbar
             :archetypeList="archetypeList"
-            @archetypeFilterChosen="archetypeUpdate"
+            @eventArchetypeChange="archetypeUpdate"
+            @eventNameSearch="searchByName"
         />
         <AppCardsList v-if="store.cardsLoading === false" />
         <AppCardsLoading v-else />
@@ -36,7 +37,24 @@ export default {
                     .catch(function (error) {
                         console.log(error);
                     })
+        },
+        searchByName(name) {
+            if (name) {
+                store.cardsLoading = true;
+                axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + name)
+                    .then(function (response) {
+                        console.log(response.data.data);
+                        store.yugiohApi = response.data.data;
+                        store.cardsLoading = false;
+                        store.noCardsFound = false;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                        store.cardsLoading = false;
+                        store.noCardsFound = true;
+                    })
             }
+        }
     },
 
     data() {
