@@ -37,7 +37,8 @@ export default {
         margin: 0 auto;
 
         h2 {
-            background-image: url(../assets/img/header_background.png);
+            background-image: url(../assets/img/header_background.webp);
+            background-size: cover;
             border: 3px solid black;
             color: white;
             padding: 1rem;

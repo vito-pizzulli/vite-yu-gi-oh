@@ -18,8 +18,9 @@ export default {
     header {
         @include flex(row, center, center, no-wrap);
 
-        background-image: url(../assets/img/header_background.png);
+        background-image: url(../assets/img/header_background.webp);
         background-position: top;
+        background-size: cover;
         padding: 1rem;
         color: white;
         border-bottom: 3px solid black;

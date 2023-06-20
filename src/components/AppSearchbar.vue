@@ -39,7 +39,7 @@ export default {
         select {
             padding: .5rem 1rem;
             font-size: 1.2rem;
-            background-image: url(../assets/img/header_background.png);
+            background-image: url(../assets/img/header_background.webp);
             color: white;
             border-radius: 10px;
             border: none;
@@ -64,7 +64,7 @@ export default {
 
             input,
             button {
-                background-image: url(../assets/img/header_background.png);
+                background-image: url(../assets/img/header_background.webp);
                 color: white;
                 padding: .5rem 1rem;
                 font-size: 1.2rem;
