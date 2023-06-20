@@ -2,6 +2,7 @@
     <main>
         <AppSearchbar
             :archetypeList="archetypeList"
+            @archetypeFilterChosen="archetypeUpdate"
         />
         <AppCardsList v-if="store.cardsLoading === false" />
         <AppCardsLoading v-else />
@@ -21,6 +22,12 @@ export default {
         AppSearchbar,
         AppCardsList,
         AppCardsLoading
+    },
+
+    methods: {
+        archetypeUpdate(archetype) {
+            console.log(archetype)
+        }
     },
 
     data() {
