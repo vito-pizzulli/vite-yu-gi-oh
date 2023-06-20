@@ -49,7 +49,7 @@ export default {
             color: rgb(255, 219, 126);
             font-weight: 600;
             padding: .5rem;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
     }
