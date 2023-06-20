@@ -21,8 +21,8 @@ export default {
 
     methods: {
         eventNameSearch() {
-            this.$emit('eventNameSearch', this.nameToSearch);
-            if (this.nameToSearch >= 3) {
+            if ((this.nameToSearch.trim() !== '') && this.nameToSearch.length >= 3) {
+                this.$emit('eventNameSearch', this.nameToSearch);
                 this.nameToSearch = ''
             }
         }
