@@ -1,11 +1,13 @@
 <template>
     <main>
+        <AppSearchbar />
         <AppCardsList v-if="store.cardsLoading === false" />
         <AppCardsLoading v-else />
     </main>
 </template>
 
 <script>
+import AppSearchbar from './AppSearchbar.vue';
 import AppCardsList from './AppCardsList.vue';
 import AppCardsLoading from './AppCardsLoading.vue';
 import axios from 'axios';
@@ -14,6 +16,7 @@ export default {
     name: 'AppMain',
 
     components: {
+        AppSearchbar,
         AppCardsList,
         AppCardsLoading
     },
@@ -25,7 +28,7 @@ export default {
     },
 
     created(){
-        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=3711')
+        axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
             .then(function (response) {
                 console.log(response.data.data);
                 store.yugiohApi = response.data.data;
