@@ -53,4 +53,19 @@ export default {
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         }
     }
+
+
+    /* 2K Layout (from 2560px to 3840px */
+    @media screen and (min-width: 2560px) {
+        div.app-cards-element {
+            height: 650px;
+        }
+    }
+
+    /* 4K Layout (from 3840px to higher resolutions */
+    @media screen and (min-width: 3840px) {
+        div.app-cards-element {
+            height: 1000px;
+        }
+    }
 </style>
