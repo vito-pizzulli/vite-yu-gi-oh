@@ -40,21 +40,19 @@ export default {
                     })
         },
         searchByName(name) {
-            if (name.length >= 3) {
-                store.cardsLoading = true;
-                axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + name)
-                    .then(function (response) {
-                        console.log(response.data.data);
-                        store.yugiohApi = response.data.data;
-                        store.cardsLoading = false;
-                        store.noCardsFound = false;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                        store.cardsLoading = false;
-                        store.noCardsFound = true;
-                    })
-            }
+            store.cardsLoading = true;
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + name)
+                .then(function (response) {
+                    console.log(response.data.data);
+                    store.yugiohApi = response.data.data;
+                    store.cardsLoading = false;
+                    store.noCardsFound = false;
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    store.cardsLoading = false;
+                    store.noCardsFound = true;
+                })
         }
     },
 
