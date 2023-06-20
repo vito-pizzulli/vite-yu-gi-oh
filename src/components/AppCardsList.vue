@@ -1,7 +1,8 @@
 <template>
     <div class="app-cards-list">
-        <h2>Found {{ store.yugiohApi.length }} cards</h2>
-        <AppCardsElement v-for="card in store.yugiohApi"
+        <h2 v-if="(store.noCardsFound === false)">Found {{ store.yugiohApi.length }} cards.</h2>
+        <h2 v-if="(store.noCardsFound === true)">No cards found with the inserted name.</h2>
+        <AppCardsElement v-for="card in store.yugiohApi" v-if="(store.noCardsFound === false)"
             :cardElement="card"
         />
     </div>
