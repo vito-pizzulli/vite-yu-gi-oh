@@ -1,8 +1,8 @@
 <template>
     <div class="app-searchbar">
         <select name="card-archetype" id="card-archetype" @change="$emit('archetypeFilterChosen', $event.target.value)">
-            <option value="All">All</option>
-            <option v-for="archetype in archetypeList" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
+            <option selected hidden>Choose an Archetype</option>
+            <option v-for="archetype in archetypeList">{{ archetype.archetype_name }}</option>
         </select>
 
 
@@ -32,6 +32,7 @@ export default {
             background-color: white;
             border-radius: 10px;
             border: none;
+            text-align: center;
         }
     }
 </style>
