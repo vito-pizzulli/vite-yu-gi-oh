@@ -1,6 +1,6 @@
 <template>
     <div class="app-searchbar">
-        <select name="card-archetype" id="card-archetype" @change="$emit('eventArchetypeChange', $event.target.value)">
+        <select name="card-archetype" id="card-archetype" @change="$emit('eventArchetypeChange', $event.target.value)" v-if="(nameToSearch == 0)">
             <option selected hidden>Choose an Archetype</option>
             <option v-for="archetype in archetypeList">{{ archetype.archetype_name }}</option>
         </select>
@@ -31,7 +31,7 @@ export default {
     @use '../styles/partials/mixins' as *;
     
     div.app-searchbar {
-        @include flex(row, space-between, center, wrap);
+        @include flex(row, flex-end, center, wrap);
         width: 80%;
         margin: 0 auto;
         padding: 1rem;
