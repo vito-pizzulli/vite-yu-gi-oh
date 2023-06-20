@@ -97,6 +97,21 @@ export default {
         background-attachment: fixed;
         background-size: contain;
         background-position: bottom;
+        min-height: 900px;
         padding: 1rem;
+    }
+
+    /* 2K Layout (from 2560px to 3840px */
+    @media screen and (min-width: 2560px) {
+        main {
+            min-height: 1350px;
+        }
+    }
+
+    /* 4K Layout (from 3840px to higher resolutions */
+    @media screen and (min-width: 3840px) {
+        main {
+            min-height: 2050px;
+        }
     }
 </style>
