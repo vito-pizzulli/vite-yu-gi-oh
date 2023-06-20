@@ -1,6 +1,8 @@
 <template>
     <main>
-        <AppSearchbar />
+        <AppSearchbar
+            :archetypeList="archetypeList"
+        />
         <AppCardsList v-if="store.cardsLoading === false" />
         <AppCardsLoading v-else />
     </main>
@@ -23,7 +25,8 @@ export default {
 
     data() {
         return {
-            store
+            store,
+            archetypeList: []
         }
     },
 
@@ -33,6 +36,15 @@ export default {
                 console.log(response.data.data);
                 store.yugiohApi = response.data.data;
                 store.cardsLoading = false;
+            })
+            .catch(function (error) {
+                console.log(error);
+            }),
+
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+            .then(response => {
+                console.log(response.data);
+                this.archetypeList = [...response.data];
             })
             .catch(function (error) {
                 console.log(error);
