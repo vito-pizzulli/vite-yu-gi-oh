@@ -40,7 +40,7 @@ export default {
                     })
         },
         searchByName(name) {
-            if (name) {
+            if (name.length >= 3) {
                 store.cardsLoading = true;
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=' + name)
                     .then(function (response) {
