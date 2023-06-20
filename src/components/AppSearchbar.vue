@@ -39,11 +39,17 @@ export default {
         select {
             padding: .5rem 1rem;
             font-size: 1.2rem;
-            background-color: white;
+            background-image: url(../assets/img/header_background.png);
+            color: white;
             border-radius: 10px;
             border: none;
             text-align: center;
             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            border: 3px solid black;
+
+            option {
+                color: black;
+            }
         }
 
         div.card-name-search {
@@ -58,10 +64,12 @@ export default {
 
             input,
             button {
+                background-image: url(../assets/img/header_background.png);
+                color: white;
                 padding: .5rem 1rem;
                 font-size: 1.2rem;
                 border: none;
-                background-color: white;
+                border: 3px solid black;
                 box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             }
         }
