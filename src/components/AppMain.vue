@@ -95,8 +95,7 @@ export default {
     main {
         background-image: url(../assets/img/main_background.webp);
         background-attachment: fixed;
-        background-size: contain;
-        background-position: bottom;
+        background-size: cover;
         min-height: 900px;
         padding: 1rem;
     }
