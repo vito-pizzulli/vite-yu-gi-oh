@@ -28,6 +28,7 @@ export default {
     methods: {
         archetypeUpdate(archetype) {
             store.cardsLoading = true;
+            store.noCardsFound = false;
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=' + archetype)
                     .then(function (response) {
                         console.log(response.data.data);
