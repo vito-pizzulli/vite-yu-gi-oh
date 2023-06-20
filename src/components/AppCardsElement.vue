@@ -2,7 +2,7 @@
     <div class="app-cards-element">
         <img :src="cardElement.card_images[0].image_url" :alt="cardElement.name + 'Image'">
         <h3>{{ cardElement.name }}</h3>
-        <span>{{ cardElement.race }}</span>
+        <span>{{ cardElement.archetype }}</span>
     </div>
 </template>
 
