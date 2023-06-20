@@ -22,9 +22,9 @@ export default {
 
     div.app-cards-element {
         background-color: #d48f38;
-        width: calc(100% / 5 - 1rem);
+        width: calc(100% / 5 - 2rem);
         height: 500px;
-        margin: 1rem 0;
+        margin: 1rem;
         text-align: center;
         border-radius: 0 0 20px 20px;
 

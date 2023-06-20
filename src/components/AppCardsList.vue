@@ -30,7 +30,7 @@ export default {
     @use '../styles/partials/mixins' as *;
 
     div.app-cards-list {
-        @include flex(row, space-between, start, wrap);
+        @include flex(row, start, start, wrap);
         background-color: white;
         padding: 3rem;
         width: 80%;
