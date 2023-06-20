@@ -5,7 +5,7 @@
             <option v-for="archetype in archetypeList">{{ archetype.archetype_name }}</option>
         </select>
         <div class="card-name-search">
-            <input type="text" placeholder="Insert Card Name" v-model="nameToSearch" @keyup.enter="eventNameSearch">
+            <input type="text" placeholder="Insert Card Name (minimum 3 characters)" v-model="nameToSearch" @keyup.enter="eventNameSearch">
             <button @click="eventNameSearch">Search</button>
         </div>
 
@@ -66,6 +66,7 @@ export default {
                 border-radius: 10px;
                 margin: 0 1rem;
                 text-align: center;
+                width: 25rem;
             }
 
             button {
