@@ -5,8 +5,8 @@
             <option v-for="archetype in archetypeList">{{ archetype.archetype_name }}</option>
         </select>
         <div class="card-name-search">
-            <input type="text" placeholder="Insert card name" v-model="nameToSearch" @keyup.enter="$emit('eventNameSearch', nameToSearch)">
-            <button @click="$emit('eventNameSearch', nameToSearch)">Search</button>
+            <input type="text" placeholder="Insert card name" v-model="nameToSearch" @keyup.enter="eventNameSearch">
+            <button @click="eventNameSearch">Search</button>
         </div>
 
     </div>
@@ -17,6 +17,15 @@ export default {
 
     props: {
         archetypeList: Array
+    },
+
+    methods: {
+        eventNameSearch() {
+            this.$emit('eventNameSearch', this.nameToSearch);
+            if (this.nameToSearch >= 3) {
+                this.nameToSearch = ''
+            }
+        }
     },
 
     data() {
