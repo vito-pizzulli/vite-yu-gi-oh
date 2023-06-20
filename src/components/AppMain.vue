@@ -26,8 +26,17 @@ export default {
 
     methods: {
         archetypeUpdate(archetype) {
-            console.log(archetype)
-        }
+            store.cardsLoading = true;
+                axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=' + archetype)
+                    .then(function (response) {
+                        console.log(response.data.data);
+                        store.yugiohApi = response.data.data;
+                        store.cardsLoading = false;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    })
+            }
     },
 
     data() {
@@ -37,7 +46,7 @@ export default {
         }
     },
 
-    created(){
+    created() {
         axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
             .then(function (response) {
                 console.log(response.data.data);
